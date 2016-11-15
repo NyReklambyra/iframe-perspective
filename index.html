@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/styles.css" media="screen" title="no title">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="scripts.js" charset="utf-8"></script>
+  <title>iframe perspective</title>
+</head>
+<body>
+  <!-- Settings -->
+  <div class="toolbar">
+    <h2>Settings</h2>
+
+    <div class="form-item">
+      <div class="prefix">URL:</div>
+      <input type="text" name="url" value="http://ny.se">
+    </div>
+    <div class="form-item">
+      <div class="prefix">h1:</div>
+      <input type="text" name="title" value="ny.se">
+    </div>
+    <div class="form-item">
+      <div class="prefix">Width:</div>
+      <input type="number" name="width" value="80">
+      <div class="suffix">%</div>
+    </div>
+    <div class="form-item">
+      <div class="prefix">Height:</div>
+      <input type="number" name="height" value="140">
+      <div class="suffix">%</div>
+    </div>
+    <div class="form-item">
+      <div class="prefix">Top:</div>
+      <input type="number" name="top" value="-25">
+      <div class="suffix">%</div>
+    </div>
+    <div class="form-item">
+      <div class="prefix">Right:</div>
+      <input type="number" name="right" value="-25">
+      <div class="suffix">%</div>
+    </div>
+
+    <div class="form-item">
+      <div class="prefix">Color:</div>
+      <select name="color">
+        <option value="">Pink</option>
+        <option value="blue">Blue</option>
+      </select>
+    </div>
+
+    <div class="scale-button">1920x1080</div>
+  </div>
+
+  <div class="wrapper">
+    <h1>ny.se</h1>
+
+    <!-- iframe + wrapper -->
+    <div class="iframe">
+      <iframe src="http://www.ny.se" frameborder="0"></iframe>
+    </div>
+  </div>
+</body>
+</html>

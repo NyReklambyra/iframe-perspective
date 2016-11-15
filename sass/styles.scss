@@ -1,0 +1,199 @@
+@import "compass/reset";
+
+//$bg: #FFDBC8;
+$bg: #FDE3CD;
+$bgBlue: #32506E;
+$rotation: rotateX(50deg) rotateY(0deg) rotateZ(-45deg);
+$ff: 'Inconsolata', monospace;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: $ff;
+  background-color: $bgBlue;
+  overflow: hidden;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg;
+
+  &.limit {
+    width: 1920px;
+    height: 1080px;
+
+    h1 {
+      font-size: 192px;
+      line-height: 1em;
+    }
+  }
+}
+
+h1 {
+  font-size: 10vw;
+  line-height: 1em;
+  font-weight: bold;
+  position: absolute;
+  z-index: 200;
+  bottom: 2vh;
+  left: 2vw;
+  max-width: 96vw;
+  color: fade-out(darken($bg,20),0.5);
+  font-family: 'gotham';
+  pointer-events: none;
+}
+
+.iframe {
+  position: absolute;
+  z-index: 100;
+  right: -25%;
+  bottom: -25%;
+  width: 80%;
+  height: 140%;
+  -webkit-perspective: 3200;
+  perspective: 0;
+
+  iframe {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    transform: $rotation;
+    background: #fff url('../ripple.svg') no-repeat center center;
+    background-size: 200px auto;
+    box-shadow: -1px 1px 0px 0px #eee,-2px 2px 0px 0px #eee,-3px 3px 0px 0px #eee, -4px 4px 0px 0px #eee, -5px 5px 0px 0px #eee,-6px 6px 0px 0px #eee, -3vw 10vh 80px 20px fade-out(darken($bg, 30), 0.7);
+  }
+}
+
+.toolbar {
+  position: fixed;
+  z-index: 300;
+  left: -256px;
+  top: 0px;
+  width: 340px;
+  height: 100%;
+  padding: 32px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  background-color: fade-out(darken($bg, 20), 0.5);
+  color: desaturate(darken($bg,70),25);
+
+  &:hover {
+    left: 0px;
+    opacity: 1;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 32px;
+  }
+
+  .form-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .prefix {
+      font-weight: bold;
+    }
+
+    input,
+    select {
+      -webkit-appearance: none;
+      font-family: $ff;
+      font-size: 20px;
+      width: 100%;
+      height: 40px;
+      border: none;
+      box-shadow: none;
+      border-radius: 0px;
+      width: 3em;
+      margin: 0px 8px;
+      background-color: transparent;
+      border-bottom: 2px solid desaturate(darken($bg,70),25);
+
+      &:focus {
+        outline: none;
+        border-color: #fff;
+      }
+    }
+
+    select,
+    input[type="text"] {
+      width: 100%;
+    }
+  }
+
+  .scale-button {
+    margin-top: 32px;
+    background-color: desaturate(darken($bg,70),25);
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 72px;
+    cursor: pointer;
+
+    &.active {
+      background-color: #fff;
+      color: desaturate(darken($bg,70),25);
+    }
+  }
+}
+
+
+body.blue {
+  background-color: $bg;
+
+  .wrapper {
+    background-color: $bgBlue;
+  }
+
+  h1 {
+    color: fade-out(darken($bgBlue,20),0.5);
+  }
+
+  .toolbar {
+    background-color: fade-out(darken($bgBlue, 20), 0.5);
+    color: #fff;
+
+    input,
+    select {
+      border-color: desaturate(darken($bgBlue,70),25);
+      color: #fff;
+
+      &:focus {
+        border-color: #fff;
+      }
+    }
+  }
+
+  .iframe {
+    iframe {
+      box-shadow: -1px 1px 0px 0px #eee,-2px 2px 0px 0px #eee,-3px 3px 0px 0px #eee, -4px 4px 0px 0px #eee, -5px 5px 0px 0px #eee,-6px 6px 0px 0px #eee, -3vw 10vh 80px 20px fade-out(darken($bgBlue, 30), 0.7);
+    }
+  }
+
+  .scale-button {
+    background-color: desaturate(darken($bgBlue,70),25);
+
+    &.active {
+      background-color: #fff;
+      color: desaturate(darken($bgBlue,70),25);
+    }
+  }
+}
