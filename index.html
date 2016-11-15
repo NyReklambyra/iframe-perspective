@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
   <link rel="stylesheet" href="stylesheets/styles.css" media="screen" title="no title">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="chroma.min.js" charset="utf-8"></script>
   <script src="scripts.js" charset="utf-8"></script>
   <title>iframe perspective</title>
 </head>
@@ -44,12 +45,46 @@
       <div class="suffix">%</div>
     </div>
 
-    <div class="form-item">
+    <!--<div class="form-item">
       <div class="prefix">Color:</div>
       <select name="color">
         <option value="">Pink</option>
         <option value="blue">Blue</option>
       </select>
+    </div>-->
+
+    <div class="form-color">
+      <div class="form-item">
+        <div class="prefix">Mode:</div>
+        <select class="color-mode" name="color-mode">
+          <option value="simple">Simple</option>
+          <option value="complex">Complex</option>
+        </select>
+      </div>
+
+      <div class="color-simple">
+        <div class="form-item">
+          <div class="prefix">Color:</div>
+          <input type="color" name="colorSimple" value="#FDE3CD">
+        </div>
+      </div>
+
+      <div class="color-complex">
+        <div class="form-item">
+          <div class="prefix">Bg:</div>
+          <input type="color" name="bgColor" value="#FDE3CD">
+        </div>
+
+        <div class="form-item">
+          <div class="prefix">Text:</div>
+          <input type="color" name="textColor" value="#FDE3CD">
+        </div>
+
+        <div class="form-item">
+          <div class="prefix">Shadow:</div>
+          <input type="color" name="shadowColor" value="#FDE3CD">
+        </div>
+      </div>
     </div>
 
     <div class="scale-button">1920x1080</div>
@@ -60,7 +95,10 @@
 
     <!-- iframe + wrapper -->
     <div class="iframe">
-      <iframe src="http://www.ny.se" frameborder="0"></iframe>
+      <div class="iframe-inner">
+        <div class="edge"></div>
+        <iframe src="http://www.ny.se" frameborder="0" allowtransparency="false"></iframe>
+      </div>
     </div>
   </div>
 </body>
