@@ -14,80 +14,116 @@
 <body>
   <!-- Settings -->
   <div class="toolbar">
-    <h2>Settings</h2>
+    <div class="toolbar__inner">
+      <h2>Settings</h2>
 
-    <div class="form-item">
-      <div class="prefix">URL:</div>
-      <input type="text" name="url" value="http://ny.se">
-    </div>
-    <div class="form-item">
-      <div class="prefix">h1:</div>
-      <input type="text" name="title" value="ny.se">
-    </div>
-    <div class="form-item">
-      <div class="prefix">Width:</div>
-      <input type="number" name="width" value="80">
-      <div class="suffix">%</div>
-    </div>
-    <div class="form-item">
-      <div class="prefix">Height:</div>
-      <input type="number" name="height" value="140">
-      <div class="suffix">%</div>
-    </div>
-    <div class="form-item">
-      <div class="prefix">Top:</div>
-      <input type="number" name="top" value="-25">
-      <div class="suffix">%</div>
-    </div>
-    <div class="form-item">
-      <div class="prefix">Right:</div>
-      <input type="number" name="right" value="-25">
-      <div class="suffix">%</div>
-    </div>
-
-    <!--<div class="form-item">
-      <div class="prefix">Color:</div>
-      <select name="color">
-        <option value="">Pink</option>
-        <option value="blue">Blue</option>
-      </select>
-    </div>-->
-
-    <div class="form-color">
       <div class="form-item">
-        <div class="prefix">Mode:</div>
-        <select class="color-mode" name="color-mode">
-          <option value="simple">Simple</option>
-          <option value="complex">Complex</option>
+        <div class="prefix">URL:</div>
+        <input type="text" name="url" value="http://ny.se">
+      </div>
+      <div class="form-item">
+        <div class="prefix">h1:</div>
+        <input type="text" name="title" value="ny.se">
+      </div>
+
+      <div class="settings-category">
+        <div class="trigger">Color</div>
+
+        <div class="form-item">
+          <div class="prefix">Mode:</div>
+          <select class="color-mode" name="color-mode">
+            <option value="simple">Simple</option>
+            <option value="complex">Complex</option>
+          </select>
+        </div>
+
+        <div class="color-simple">
+          <div class="form-item">
+            <div class="prefix">Color:</div>
+            <input type="color" name="colorSimple" value="#FDE3CD">
+          </div>
+        </div>
+
+        <div class="color-complex">
+          <div class="form-item">
+            <div class="prefix">Bg:</div>
+            <input type="color" name="bgColor" value="#FDE3CD">
+          </div>
+
+          <div class="form-item">
+            <div class="prefix">Text:</div>
+            <input type="color" name="textColor" value="#FDE3CD">
+          </div>
+
+          <div class="form-item">
+            <div class="prefix">Shadow:</div>
+            <input type="color" name="shadowColor" value="#FDE3CD">
+          </div>
+
+          <div class="form-item">
+            <div class="prefix">Frame:</div>
+            <input type="color" name="frameColor" value="#ff00ff">
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-category">
+        <div class="trigger">Size</div>
+        <div class="tools">
+          <div class="form-item">
+            <div class="prefix">Width:</div>
+            <input type="number" name="width" value="80">
+            <div class="suffix">%</div>
+          </div>
+          <div class="form-item">
+            <div class="prefix">Height:</div>
+            <input type="number" name="height" value="140">
+            <div class="suffix">%</div>
+          </div>
+          <div class="form-item">
+            <div class="prefix">Top:</div>
+            <input type="number" name="top" value="-25">
+            <div class="suffix">%</div>
+          </div>
+          <div class="form-item">
+            <div class="prefix">Right:</div>
+            <input type="number" name="right" value="-25">
+            <div class="suffix">%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-category settings--rotation">
+        <div class="trigger">Rotation</div>
+        <div class="tools">
+          <div class="form-item">
+            <div class="prefix">X:</div>
+            <input type="number" name="rotateX" value="50">
+            <div class="suffix">°</div>
+          </div>
+          <div class="form-item">
+            <div class="prefix">Y:</div>
+            <input type="number" name="rotateY" value="0">
+            <div class="suffix">°</div>
+          </div>
+          <div class="form-item">
+            <div class="prefix">Z:</div>
+            <input type="number" name="rotateZ" value="-45">
+            <div class="suffix">°</div>
+          </div>
+        </div>
+      </div>
+
+      <!--<div class="form-item">
+        <div class="prefix">Color:</div>
+        <select name="color">
+          <option value="">Pink</option>
+          <option value="blue">Blue</option>
         </select>
-      </div>
+      </div>-->
 
-      <div class="color-simple">
-        <div class="form-item">
-          <div class="prefix">Color:</div>
-          <input type="color" name="colorSimple" value="#FDE3CD">
-        </div>
-      </div>
-
-      <div class="color-complex">
-        <div class="form-item">
-          <div class="prefix">Bg:</div>
-          <input type="color" name="bgColor" value="#FDE3CD">
-        </div>
-
-        <div class="form-item">
-          <div class="prefix">Text:</div>
-          <input type="color" name="textColor" value="#FDE3CD">
-        </div>
-
-        <div class="form-item">
-          <div class="prefix">Shadow:</div>
-          <input type="color" name="shadowColor" value="#FDE3CD">
-        </div>
-      </div>
+      <div class="scale-button">1920x1080</div>
     </div>
-
-    <div class="scale-button">1920x1080</div>
   </div>
 
   <div class="wrapper">

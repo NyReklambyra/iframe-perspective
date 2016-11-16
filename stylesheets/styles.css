@@ -173,20 +173,49 @@ h1 {
   transition: all 0.2s ease-in-out;
   background-color: rgba(19, 8, 22, 0.7);
   color: #fff;
+  cursor: pointer;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
-/* line 115, ../sass/styles.scss */
+/* line 118, ../sass/styles.scss */
+.toolbar .toolbar__inner {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s 0.2s ease-in-out;
+}
+/* line 124, ../sass/styles.scss */
 .toolbar:hover {
+  opacity: 0.5;
+}
+/* line 129, ../sass/styles.scss */
+.toolbar.open {
   left: 0px;
   opacity: 1;
+  cursor: default;
 }
-/* line 120, ../sass/styles.scss */
-.toolbar h2 {
-  font-size: 24px;
+/* line 134, ../sass/styles.scss */
+.toolbar.open .toolbar__inner {
+  pointer-events: all;
+  opacity: 1;
+}
+/* line 141, ../sass/styles.scss */
+.toolbar .settings-category .trigger {
   font-weight: bold;
-  line-height: 30px;
+  font-size: 22px;
+  line-height: 24px;
+  padding-bottom: 8px;
+  margin-top: 32px;
+  margin-bottom: 8px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+}
+/* line 156, ../sass/styles.scss */
+.toolbar h2 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 36px;
   margin-bottom: 32px;
 }
-/* line 127, ../sass/styles.scss */
+/* line 163, ../sass/styles.scss */
 .toolbar .form-item {
   display: flex;
   flex-flow: row nowrap;
@@ -194,11 +223,11 @@ h1 {
   align-items: center;
   margin-bottom: 16px;
 }
-/* line 134, ../sass/styles.scss */
+/* line 170, ../sass/styles.scss */
 .toolbar .form-item .prefix {
   font-weight: bold;
 }
-/* line 138, ../sass/styles.scss */
+/* line 174, ../sass/styles.scss */
 .toolbar .form-item input,
 .toolbar .form-item select {
   -webkit-appearance: none;
@@ -215,18 +244,18 @@ h1 {
   border-bottom: 2px solid #fff;
   color: #fff;
 }
-/* line 154, ../sass/styles.scss */
+/* line 190, ../sass/styles.scss */
 .toolbar .form-item input:focus,
 .toolbar .form-item select:focus {
   outline: none;
   border-color: #fff;
 }
-/* line 160, ../sass/styles.scss */
+/* line 196, ../sass/styles.scss */
 .toolbar .form-item select,
 .toolbar .form-item input[type="text"] {
   width: 100%;
 }
-/* line 165, ../sass/styles.scss */
+/* line 201, ../sass/styles.scss */
 .toolbar .form-item input[type="color"] {
   border: none;
   width: 64px;
@@ -234,17 +263,11 @@ h1 {
   border-radius: 50%;
   border: none;
 }
-/* line 174, ../sass/styles.scss */
-.toolbar .form-color {
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 2px solid #fff;
-}
-/* line 180, ../sass/styles.scss */
+/* line 210, ../sass/styles.scss */
 .toolbar .color-complex {
   display: none;
 }
-/* line 184, ../sass/styles.scss */
+/* line 214, ../sass/styles.scss */
 .toolbar .scale-button {
   margin-top: 32px;
   color: #fff;
@@ -254,49 +277,49 @@ h1 {
   line-height: 72px;
   cursor: pointer;
 }
-/* line 193, ../sass/styles.scss */
+/* line 223, ../sass/styles.scss */
 .toolbar .scale-button.active {
   background-color: #fff;
   color: #543011;
 }
 
-/* line 201, ../sass/styles.scss */
+/* line 231, ../sass/styles.scss */
 body.blue {
   background-color: #FDE3CD;
 }
-/* line 204, ../sass/styles.scss */
+/* line 234, ../sass/styles.scss */
 body.blue .wrapper {
   background-color: #32506E;
 }
-/* line 208, ../sass/styles.scss */
+/* line 238, ../sass/styles.scss */
 body.blue h1 {
   color: rgba(18, 29, 40, 0.5);
 }
-/* line 212, ../sass/styles.scss */
+/* line 242, ../sass/styles.scss */
 body.blue .toolbar {
   background-color: rgba(18, 29, 40, 0.5);
   color: #fff;
 }
-/* line 216, ../sass/styles.scss */
+/* line 246, ../sass/styles.scss */
 body.blue .toolbar input,
 body.blue .toolbar select {
   border-color: black;
   color: #fff;
 }
-/* line 221, ../sass/styles.scss */
+/* line 251, ../sass/styles.scss */
 body.blue .toolbar input:focus,
 body.blue .toolbar select:focus {
   border-color: #fff;
 }
-/* line 228, ../sass/styles.scss */
+/* line 258, ../sass/styles.scss */
 body.blue .iframe .iframe-inner {
   box-shadow: -3vw 10vh 80px 20px rgba(2, 4, 5, 0.3);
 }
-/* line 233, ../sass/styles.scss */
+/* line 263, ../sass/styles.scss */
 body.blue .scale-button {
   background-color: black;
 }
-/* line 236, ../sass/styles.scss */
+/* line 266, ../sass/styles.scss */
 body.blue .scale-button.active {
   background-color: #fff;
   color: black;
