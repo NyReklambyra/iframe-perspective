@@ -1,4 +1,4 @@
-Display an iframe with perspective.
+!['screenshot'](https://dl.dropboxusercontent.com/u/5970838/ip-screenshot.jpg)
 
 ##Settings
 Click the left side of the window to display the settings. From here you can change iframe src, the title, colors and iframe size and rotation. For more advanced settings, clone this project and go nuts.
