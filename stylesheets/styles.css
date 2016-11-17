@@ -171,34 +171,37 @@ h1 {
   padding: 32px;
   opacity: 0;
   transition: all 0.2s ease-in-out;
-  background-color: rgba(19, 8, 22, 0.7);
+  background: rgba(19, 8, 22, 0.5) url("../settings-icon.svg") no-repeat 282px 26px;
+  background-size: 32px 32px;
   color: #fff;
   cursor: pointer;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
-/* line 118, ../sass/styles.scss */
+/* line 119, ../sass/styles.scss */
 .toolbar .toolbar__inner {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s 0.2s ease-in-out;
 }
-/* line 124, ../sass/styles.scss */
+/* line 125, ../sass/styles.scss */
 .toolbar:hover {
-  opacity: 0.5;
+  opacity: 1;
 }
-/* line 129, ../sass/styles.scss */
+/* line 130, ../sass/styles.scss */
 .toolbar.open {
   left: 0px;
   opacity: 1;
   cursor: default;
+  background-color: rgba(19, 8, 22, 0.7);
+  background-image: none;
 }
-/* line 134, ../sass/styles.scss */
+/* line 137, ../sass/styles.scss */
 .toolbar.open .toolbar__inner {
   pointer-events: all;
   opacity: 1;
 }
-/* line 141, ../sass/styles.scss */
+/* line 144, ../sass/styles.scss */
 .toolbar .settings-category .trigger {
   font-weight: bold;
   font-size: 22px;
@@ -208,14 +211,14 @@ h1 {
   margin-bottom: 8px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.6);
 }
-/* line 156, ../sass/styles.scss */
+/* line 159, ../sass/styles.scss */
 .toolbar h2 {
   font-size: 32px;
   font-weight: bold;
   line-height: 36px;
   margin-bottom: 32px;
 }
-/* line 163, ../sass/styles.scss */
+/* line 166, ../sass/styles.scss */
 .toolbar .form-item {
   display: flex;
   flex-flow: row nowrap;
@@ -223,11 +226,11 @@ h1 {
   align-items: center;
   margin-bottom: 16px;
 }
-/* line 170, ../sass/styles.scss */
+/* line 173, ../sass/styles.scss */
 .toolbar .form-item .prefix {
   font-weight: bold;
 }
-/* line 174, ../sass/styles.scss */
+/* line 177, ../sass/styles.scss */
 .toolbar .form-item input,
 .toolbar .form-item select {
   -webkit-appearance: none;
@@ -244,18 +247,18 @@ h1 {
   border-bottom: 2px solid #fff;
   color: #fff;
 }
-/* line 190, ../sass/styles.scss */
+/* line 193, ../sass/styles.scss */
 .toolbar .form-item input:focus,
 .toolbar .form-item select:focus {
   outline: none;
   border-color: #fff;
 }
-/* line 196, ../sass/styles.scss */
+/* line 199, ../sass/styles.scss */
 .toolbar .form-item select,
 .toolbar .form-item input[type="text"] {
   width: 100%;
 }
-/* line 201, ../sass/styles.scss */
+/* line 204, ../sass/styles.scss */
 .toolbar .form-item input[type="color"] {
   border: none;
   width: 64px;
@@ -263,11 +266,11 @@ h1 {
   border-radius: 50%;
   border: none;
 }
-/* line 210, ../sass/styles.scss */
+/* line 213, ../sass/styles.scss */
 .toolbar .color-complex {
   display: none;
 }
-/* line 214, ../sass/styles.scss */
+/* line 217, ../sass/styles.scss */
 .toolbar .scale-button {
   margin-top: 32px;
   color: #fff;
@@ -277,49 +280,49 @@ h1 {
   line-height: 72px;
   cursor: pointer;
 }
-/* line 223, ../sass/styles.scss */
+/* line 226, ../sass/styles.scss */
 .toolbar .scale-button.active {
   background-color: #fff;
   color: #543011;
 }
 
-/* line 231, ../sass/styles.scss */
+/* line 234, ../sass/styles.scss */
 body.blue {
   background-color: #FDE3CD;
 }
-/* line 234, ../sass/styles.scss */
+/* line 237, ../sass/styles.scss */
 body.blue .wrapper {
   background-color: #32506E;
 }
-/* line 238, ../sass/styles.scss */
+/* line 241, ../sass/styles.scss */
 body.blue h1 {
   color: rgba(18, 29, 40, 0.5);
 }
-/* line 242, ../sass/styles.scss */
+/* line 245, ../sass/styles.scss */
 body.blue .toolbar {
   background-color: rgba(18, 29, 40, 0.5);
   color: #fff;
 }
-/* line 246, ../sass/styles.scss */
+/* line 249, ../sass/styles.scss */
 body.blue .toolbar input,
 body.blue .toolbar select {
   border-color: black;
   color: #fff;
 }
-/* line 251, ../sass/styles.scss */
+/* line 254, ../sass/styles.scss */
 body.blue .toolbar input:focus,
 body.blue .toolbar select:focus {
   border-color: #fff;
 }
-/* line 258, ../sass/styles.scss */
+/* line 261, ../sass/styles.scss */
 body.blue .iframe .iframe-inner {
   box-shadow: -3vw 10vh 80px 20px rgba(2, 4, 5, 0.3);
 }
-/* line 263, ../sass/styles.scss */
+/* line 266, ../sass/styles.scss */
 body.blue .scale-button {
   background-color: black;
 }
-/* line 266, ../sass/styles.scss */
+/* line 269, ../sass/styles.scss */
 body.blue .scale-button.active {
   background-color: #fff;
   color: black;

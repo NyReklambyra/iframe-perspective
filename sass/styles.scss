@@ -109,7 +109,8 @@ h1 {
   padding: 32px;
   opacity: 0;
   transition: all 0.2s ease-in-out;
-  background-color: rgba(19, 8, 22, 0.7);
+  background: rgba(19, 8, 22, 0.5) url('../settings-icon.svg') no-repeat 282px 26px;
+  background-size: 32px 32px;
   color: #fff;
   cursor: pointer;
   overflow: auto;
@@ -123,13 +124,15 @@ h1 {
 
   &:hover {
     //left: 0px;
-    opacity: 0.5;
+    opacity: 1;
   }
 
   &.open {
     left: 0px;
     opacity: 1;
     cursor: default;
+    background-color: rgba(19, 8, 22, 0.7);
+    background-image: none;
 
     .toolbar__inner {
       pointer-events: all;

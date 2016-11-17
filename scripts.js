@@ -53,10 +53,22 @@ $(document).ready(function() {
       var titleColor = color.luminance() > 0.5 ? color.darken(1.2).saturate(3.2).alpha(0.5).css() : color.brighten(1.1).saturate(1.2).alpha(0.5).css();
       var shadowColor = color.luminance() > 0.5 ? color.darken(1.1).saturate(2.8).alpha(0.3).css() : color.darken(1.4).saturate(0.8).alpha(0.3).css();
       var shadowValue = '-3vw 10vh 80px 20px ' + shadowColor;
+
+      var shadowColorHex = chroma(titleColor).hex();
+      var shadowColorHex = chroma(shadowColor).hex();
+
+      //console.log(titleColorHex, shadowColorHex);
+
       $('.wrapper').css('background-color', newValue);
       $('h1').css('color', titleColor);
       $('.iframe-inner').css('box-shadow', shadowValue);
       $('body').css('background-color', spinColor);
+
+      //Set complex
+      $('input[name="bgColor"]').val(newValue);
+      $('input[name="textColor"]').val(shadowColorHex);
+      $('input[name="shadowColor"]').val(shadowColorHex);
+      $('input[name="frameColor"]').val(spinColor);
     }
 
     if($(this).attr('name') == 'bgColor') {
