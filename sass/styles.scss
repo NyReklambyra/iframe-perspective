@@ -42,7 +42,7 @@ body {
 
 h1 {
   font-size: 10vw;
-  line-height: 1em;
+  line-height: 1.2em;
   font-weight: bold;
   position: absolute;
   z-index: 200;
@@ -50,7 +50,7 @@ h1 {
   left: 2vw;
   max-width: 96vw;
   color: fade-out(darken($bg,20),0.5);
-  font-family: 'gotham';
+  font-family: 'Montserrat', sans-serif;
   pointer-events: none;
 }
 
